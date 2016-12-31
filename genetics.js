@@ -1,15 +1,20 @@
 
 function Genetics(mutationRate, populationSize) {
-    this.population = []
-    this.scores = [];
+    this.population;
+    this.scores;
     this.populationSize = populationSize;
     this.mutationRate = mutationRate;
-    this.generation = 0;
-
-    this.populationIndex = 0;
-    this.move = 0;
+    this.generation;
+    this.populationIndex;
+    this.move;
 
     this.init = function() {
+        this.generation = 0;
+        this.populationIndex = 0;
+        this.move = 0;
+        
+        this.population = []
+        this.scores = [];
         for (var i = 0; i < this.populationSize; i++) {
             this.population.push([]);
             this.scores.push(0);

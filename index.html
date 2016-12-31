@@ -4,7 +4,22 @@
     <script src="game.js"></script>
     <script src="genetics.js"></script>
     <script src="render.js"></script>
+    <style>
+        #sliderContainer {
+            padding-top: 30px;
+        }
+        #sliderContainer {
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div id="canvasContainer"></div>
+
+    <span>Initial Generation: </span>
+    <div id="sliderContainer">
+        <input id="slider" value = 0 type="range" min="0" max="10000" step="10" onchange="updateGeneration(this.value)" oninput="updateInput(this.value)" />
+        <input id="amount" type="text" value="0" >
+    </div>
 </body>
 </html>
