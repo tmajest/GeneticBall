@@ -1,6 +1,6 @@
 # GeneticBall
 
-Genetic ball demo here: https://tmajest.github.io/GeneticBall/
+Genetic ball simulation here: https://tmajest.github.io/GeneticBall/
 
 Genetic algorithm that learns how to play a simplified version of breakout.
 Each species have DNA made up of moves - either left, right, or standing still.  A species will survive longer
