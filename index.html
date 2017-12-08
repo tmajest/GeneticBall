@@ -18,8 +18,13 @@
 
     <span>Initial Generation: </span>
     <div id="sliderContainer">
-        <input id="slider" value = 0 type="range" min="0" max="10000" step="10" onchange="updateGeneration(this.value)" oninput="updateInput(this.value)" />
-        <input id="amount" type="text" value="0" >
+        <input id="slider" value = 0 type="range" min="0" max="2000" step="10" onchange="updateGeneration(this.value)" />
+        <span id="amount" type="text">0</span>
+    </div>
+    <span>Mutation Rate:</span>
+    <div id="mutationRate">
+        <input id="mutationSlider" value = 0 type="range" min="0.0" max="0.5" step="0.01" onchange="updateMutation(this.value)" />
+        <span id="mutationAmount" type="text">0</span>
     </div>
 </body>
 </html>

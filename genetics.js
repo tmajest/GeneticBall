@@ -12,7 +12,7 @@ function Genetics(mutationRate, populationSize) {
         this.generation = 0;
         this.populationIndex = 0;
         this.move = 0;
-        
+
         this.population = []
         this.scores = [];
         for (var i = 0; i < this.populationSize; i++) {

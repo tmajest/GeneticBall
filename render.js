@@ -1,8 +1,8 @@
 
 var game;
 var genetics;
-var mutationRate = 0.001;
-var populationSize = 200;
+var mutationRate = 0.002;
+var populationSize = 100;
 
 
 var isPriming = false;
@@ -17,7 +17,17 @@ function updateGeneration(generation) {
     genetics.init();
     game = new Game()
 
-    document.getElementById("amount").value = generation;
+    document.getElementById("amount").innerHTML = generation;
+}
+
+function updateMutation(newMutationRate) {
+    isPriming = true;
+    counter = 0;
+    mutationRate = newMutationRate;
+    genetics.init();
+    game = new Game()
+
+    document.getElementById("mutationAmount").innerHTML = newMutationRate;
 }
 
 function updateInput(generation) {
@@ -50,6 +60,7 @@ function draw() {
     background(60);
 
     drawGenerationText();
+    drawSpeciesText();
 
     if (isPriming) {
         prime();
@@ -64,7 +75,14 @@ function drawGenerationText() {
     var generationText = "Generation: " + genetics.generation;
     var w = textWidth(generationText);
     fill(255);
-    text(generationText, width - w - 30, height - 10);
+    text(generationText, width - w - 30, height - 40);
+}
+
+function drawSpeciesText() {
+    var speciesText = "Species: " + genetics.populationIndex + " / " + genetics.populationSize;
+    var w = textWidth(speciesText);
+    fill(255);
+    text(speciesText, width - w - 30, height - 20);
 }
 
 function drawGame() {
